@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Game.css">
+    <script src="./Game.js"></script>
+    <style>
+      
+   </style>
+</head>
+<body id="body">
+
+    <div class="frontPage" id="frontPage"> 
+        <h2 id="demo"></h2>
+        <h1 id="Start" onclick="Startgame()">Start Game</h1>
+        <ul id="options">
+            <li onclick="Setting()">Avatar/Settings</li>
+            <li>Previous Scores</li>
+            <li>Technology Tools</li>
+            <li onclick="Developer()">Developer</li>
+        </ul>
+       
+      </div>
+      <audio src="./Audio/Memories-of-Spring(chosic.com).mp3" id="three"></audio>
+
+      <div id="StartGame">
+        <div class="check"></div>
+        <h3 style="position: absolute;">High Score: <span id="highscore"></span></h3>
+        <h3 style="position: absolute; top: 50px;">Score:<span id="Sco"></span></h3>
+        <div id="gud"></div>
+      </div>
+
+      <div id="ov">
+        <h1 id="ending"></h1>
+    </div>
+
+    <div id="Settings">
+      <div class="subsettings">
+      <h1>SETTINGS</h1>
+      <label for=""><b>Click Volume:</b></label><br>
+      <audio src="./Audio/mixkit-sci-fi-interface-robot-click-901.wav" id="one"></audio>
+      <input type="range" id="range" min="0" max="1" step="0.01" oninput="volu()"> <br> <br>
+      <label for=""><b>Background Music:</b></label> <br>
+      <input type="range" name="" id="range2" min="0" max="1" step="0.01" oninput="volum()">
+      <audio src="./Audio/mixkit-retro-arcade-game-over-470.wav" id="two"></audio>
+      </div>  
+      <button onclick="back()" id="BACK">BACK</button>
+  </div>
+      
+  <div id="Dev" >
+      <div class="subDev">
+          <h1 class="dd">I'm <span >OLUWAPELUMI ELISHA</span></h1>
+          <!-- <img src="./image/best pic.jpg" alt=""> -->
+      </div>
+      <h4>FullStack Web Developer</h4> 
+      <h1 class="">ABOUT ME</h1> <br>
+      <p class="">* Experienced Full Stack Developer with expertise in MERN (MongoDB, Express, React, Node.js), HTML, Tailwind CSS, and JavaScript. I specialize in building responsive, high-performance web applications, from front-end user interfaces to back-end server logic. With a strong background in both client-side and server-side development, I deliver complete solutions that meet client needs. Available for freelance projects and full-time opportunities.</p>
+      <!-- <button onclick="window.location.href='https://github.com/OluwapelumiElisha'"  https://github.com/OluwapelumiElisha>Check My Experience</button> -->
+      <button onclick="window.open('https://github.com/OluwapelumiElisha', '_blank')">Check My Experience</button>
+
+  </div>
+</body>
+ 
+</html>

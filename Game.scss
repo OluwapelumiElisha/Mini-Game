@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-user-select: none;
+}
+.frontPage {
+  width: 60%;
+  min-height: 75vh;
+  margin: 90px auto;
+  background-image: linear-gradient(rgba(255, 0, 0, 0.548), rgb(0, 0, 0)),
+    url(/images/649background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: thin solid red;
+  border-radius: 20px;
+  text-align: center;
+  h2 {
+    color: white;
+    padding-top: 30px;
+    font-size: 40px;
+  }
+  h1 {
+    margin-top: 5%;
+    font-size: 70px;
+    background: linear-gradient(
+      to bottom,
+      #be0202,
+      rgb(233, 206, 206),
+      rgb(153, 2, 2)
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation-name: up;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+  }
+  #options {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4fr);
+    gap: 20px;
+    display: none;
+    padding-top: 20px;
+    li {
+      font-size: 30px;
+      font-weight: 800;
+      color: rgba(255, 0, 0, 0.63);
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      cursor: pointer;
+    }
+  }
+}
+@keyframes up {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+#Start {
+  display: none;
+}
+#StartGame {
+  display: none;
+  .hello {
+    animation-name: Falling;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #gud {
+    width: 100%;
+    position: relative;
+    height: 80vh;
+  }
+}
+@keyframes Falling {
+  to {
+    transform: translateY(100vh);
+  }
+}
+#ov {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  #ending {
+    text-align: center;
+    font-family: cursive;
+  }
+}
+#Settings {
+  align-items: center;
+  justify-content: center;
+  border: thin solid rgba(250, 250, 250, 0.671);
+  width: 300px;
+  padding: 2px;
+  margin: 150px auto;
+  background-color: rgba(33, 245, 245, 0.565);
+  display: none;
+  .subsettings {
+    text-align: center;
+    font-family: cursive;
+    border: thin solid rgba(33, 245, 245, 0.565);
+    width: 200px;
+    margin: auto;
+    background-color: rgba(250, 250, 250, 0.671);
+  }
+  button {
+    padding: 6px;
+    width: 60px;
+    margin-left: 60px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: thin solid plum;
+    background-color: plum;
+    color: red;
+  }
+}
+
+#Dev {
+  align-items: center;
+  justify-content: center;
+  border: thin solid rgba(250, 250, 250, 0.671);
+  width: 400px;
+  padding: 2px;
+  margin: 90px auto;
+  background-color: rgb(26, 17, 17);
+  display: none;
+  .subDev {
+    display: flex;
+    gap: 50px;
+    .dd {
+      color: white;
+      font-size: 16px;
+      font: bold;
+      align-items: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      padding-top: 0px;
+      justify-content: center;
+      span {
+        color: gold;
+        font-size: 16px;
+      }
+    }
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        margin-top: 10px;
+    }
+   
+  }
+   h4{
+        color: white;
+        margin-top: 10px;
+        text-align: center;
+    }
+    h1{
+        color: gold;
+        font-size: 13px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    p{
+        color: white;
+        font-size: 12px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button{
+        padding: 4px;
+        background-color: gold;
+        border: thin solid gold;
+        color: white;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 100px;
+        
+    }
+}
+
+// MEDIA QUERY
+@media (max-width: 1046px) {
+  .frontPage {
+    width: 70%;
+    h1 {
+      animation-name: up;
+      animation-duration: 2s;
+    }
+  }
+}
+@keyframes up {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+@media (max-width: 866px) {
+  .frontPage {
+    width: 75%;
+    min-height: 45vh;
+    h1 {
+      animation-name: up;
+      animation-duration: 2s;
+      font-size: 70px;
+    }
+    #options {
+      padding-top: 30px;
+      gap: 30px;
+      li {
+        font-size: 25px;
+      }
+    }
+  }
+}
+@keyframes up {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.9);
+  }
+}
+@media (max-width: 720px) {
+  .frontPage {
+    width: 85%;
+    h1 {
+      animation-name: up;
+      animation-duration: 2s;
+      font-size: 70px;
+    }
+  }
+}
+@keyframes up {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+@media (max-width: 550px) {
+  .frontPage {
+    width: 85%;
+    h1 {
+      animation-name: up;
+      animation-duration: 2s;
+      font-size: 60px;
+    }
+  }
+}
+@keyframes up {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@media (max-width: 440px) {
+  .frontPage {
+    width: 90%;
+    min-height: 55vh;
+    h1 {
+      animation-name: up;
+      animation-duration: 2s;
+      font-size: 50px;
+    }
+    #options {
+      padding-top: 20px;
+      li {
+        font-size: 25px;
+      }
+    }
+  }
+}
+@keyframes up {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media (max-width: 338px) {
+  .frontPage {
+    min-height: 65vh;
+    width: 95%;
+    h1 {
+      animation-name: up;
+      animation-duration: 2s;
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    #options {
+      padding-top: 25px;
+      li {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@keyframes up {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+@media (max-width: 280px) {
+  .frontPage {
+    min-height: 55vh;
+    width: 95%;
+    h1 {
+      animation-name: up;
+      animation-duration: 2s;
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    #options {
+      padding-top: 20px;
+      li {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@keyframes up {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
